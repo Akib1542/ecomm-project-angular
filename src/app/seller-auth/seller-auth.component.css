@@ -46,3 +46,15 @@
 .signup button:hover {
   background-color: #0056b3;
 }
+
+.toggle {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.error {
+  color: red;
+}
