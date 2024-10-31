@@ -5,8 +5,8 @@
     </form>
 </div> -->
 <div class="product-form-container">
-    <h2>Add New Product</h2>
-    <p class="p_message">{{addProductMessage}}</p>
+    <h2>Update Product</h2>
+    <!-- <p class="p_message">{{addProductMessage}}</p> -->
     <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="product-form">
       <label for="name">Product Name</label>
       <input class="form-input" ngModel name="name" id="name" type="text" placeholder="Enter Product Name" />
@@ -26,7 +26,7 @@
       <label for="url">Product Image URL</label>
       <input class="form-input" ngModel name="url" id="url" type="url" placeholder="Enter Product URL" />
   
-      <button type="submit" class="submit-button">Submit</button>
+      <button type="submit" class="submit-button">Update</button>
     </form>
   </div>
   

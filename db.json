@@ -64,24 +64,26 @@
       "id": "cd05",
       "email": "test1@gmail.com",
       "password": "abc@123"
+    }
+  ],
+  "products": [
+    {
+      "id": "7e75",
+      "name": "iPhone14",
+      "price": 800,
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Good Phone",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwEaFSX_sn1zuYniWnR_RPd_W6msHX_YIyg5C1pU-P_zV4Sc8to6ZLDA9pEtCzMRkYFMM&usqp=CAU"
     },
     {
-      "id": "9817",
-      "name": "",
-      "password": "",
-      "email": ""
-    },
-    {
-      "id": "59c6",
-      "name": "",
-      "password": "",
-      "email": ""
-    },
-    {
-      "id": "dcac",
-      "name": "",
-      "password": "",
-      "email": ""
+      "id": "7e73",
+      "name": "Samsung M14",
+      "price": 800,
+      "category": "Mobile",
+      "color": "Blue",
+      "description": "Good Phone but usually get hanged",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiuxBtUTzgcgBOot5XtVXSsRUFc41Vc8a32A&s"
     }
   ]
 }

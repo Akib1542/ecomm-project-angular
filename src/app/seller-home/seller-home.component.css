@@ -1,0 +1,139 @@
+/* Container for the entire product list */
+.product-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .product-list-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* List styling */
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Each product as a list item */
+  .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s;
+  }
+  
+  /* Hover effect */
+  .product-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Image styling */
+  .product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  /* Product details */
+  .product-details {
+    text-align: left;
+  }
+  
+  .product-name {
+    font-size: 1.2em;
+    margin: 0;
+    color: #007bff;
+  }
+  
+  .product-category,
+  .product-price,
+  .product-color,
+  .product-description {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .product-description {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  /* Style for Product List heading */
+.product-list-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  /* Decorative underline for the heading */
+  .product-list-container h2::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  .button-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px; /* Adds space between the buttons */
+  }
+  /* Delete button styling */
+.delete-button {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 4px 8px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  /* Hover effect for delete button */
+  .delete-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+  }
+
+  .delete_message{
+    color: red;
+  }
+
+  .update-button {
+    background-color: #008031; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 4px 8px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+
+  .update-button:hover {
+    background-color: rgb(100, 143, 36); /* Darker red on hover */
+  }
+  
