@@ -136,4 +136,8 @@
   .update-button:hover {
     background-color: rgb(100, 143, 36); /* Darker red on hover */
   }
+
+  .p_message{
+    color: green;
+  }
   

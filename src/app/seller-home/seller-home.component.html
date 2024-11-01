@@ -5,7 +5,6 @@
 
     <li *ngFor="let product of productList" class="product-item">
       <img [src]="product.url" alt="{{ product.name }}" class="product-image" />
-
       <div class="product-details">
         <h3 class="product-name">{{ product.name }}</h3>
         <p class="product-category"><strong>Category:</strong> {{ product.category }}</p>
@@ -15,7 +14,8 @@
         <!-- Delete Button -->
         <div class="button-group">
           <button class="delete-button" (click)="deleteProduct(product.id)">Delete</button>
-          <button [routerLink]="['/seller-update-product/{{product.id}}']" class="update-button">Update</button>
+          <button [routerLink]="['/seller-update-product',product.id]" class="update-button">Update</button>
+    
 
         </div>
       </div>

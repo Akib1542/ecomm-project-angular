@@ -6,25 +6,27 @@
 </div> -->
 <div class="product-form-container">
     <h2>Update Product</h2>
+    <p class="p_message">{{productMessage}}</p>
+
     <!-- <p class="p_message">{{addProductMessage}}</p> -->
     <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="product-form">
       <label for="name">Product Name</label>
-      <input class="form-input" ngModel name="name" id="name" type="text" placeholder="Enter Product Name" />
+      <input class="form-input" ngModel="{{productData?.name}}" name="name" id="name" type="text" placeholder="Enter Product Name" />
   
       <label for="price">Product Price</label>
-      <input class="form-input" ngModel name="price" id="price" type="number" placeholder="Enter Product Price" />
+      <input class="form-input" ngModel="{{productData?.price}}" name="price" id="price" type="number" placeholder="Enter Product Price" />
   
       <label for="category">Product Category</label>
-      <input class="form-input" ngModel name="category" id="category" type="text" placeholder="Enter Product Category" />
+      <input class="form-input" ngModel="{{productData?.category}}" name="category" id="category" type="text" placeholder="Enter Product Category" />
   
       <label for="color">Product Color</label>
-      <input class="form-input" ngModel name="color" id="color" type="text" placeholder="Enter Product Color" />
+      <input class="form-input" ngModel="{{productData?.color}}" name="color" id="color" type="text" placeholder="Enter Product Color" />
   
       <label for="description">Product Description</label>
-      <textarea class="form-input" ngModel name="description" id="description" rows="4" placeholder="Enter Product Description"></textarea>
+      <textarea class="form-input" ngModel="{{productData?.description}}" name="description" id="description" rows="4" placeholder="Enter Product Description"></textarea>
   
       <label for="url">Product Image URL</label>
-      <input class="form-input" ngModel name="url" id="url" type="url" placeholder="Enter Product URL" />
+      <input class="form-input" ngModel="{{productData?.url}}" name="url" id="url" type="url" placeholder="Enter Product URL" />
   
       <button type="submit" class="submit-button">Update</button>
     </form>

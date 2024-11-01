@@ -8,3 +8,20 @@
     color: blueviolet;
   }
 
+  .carousel-caption{
+    color: blueviolet;
+  }
+  
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: wheat;
+    color: blueviolet;
+    border: 5px;
+  }
+
+  .carousel-indicators{
+    background-color: rgb(240, 225, 199);
+  }
+
+  .active {
+    color: rgb(165, 29, 41);
+  }
