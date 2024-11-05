@@ -1,7 +1,7 @@
 <nav class="nav">
     <h1 class="home"><a class="home" routerLink="/"> E-Comm </a></h1>
     <div *ngIf="menuType=='default'">
-        <input type="text" placeholder="Search for products" />
+        <input type="text" (keyup)="searchProduct($event)" placeholder="Search for products" />
         <button>Search</button>
     </div>
     <div [ngSwitch]="menuType">

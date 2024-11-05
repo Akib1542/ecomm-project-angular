@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router'
+import { ProductService } from '../services/product.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-    constructor ( private route : Router){}
+    constructor ( private route : Router, private product : ProductService){}
     menuType : string = 'default'
     sellerName : string = '';
 
@@ -34,5 +35,16 @@ export class HeaderComponent {
     logout(){
       localStorage.removeItem('seller');
       this.route.navigate(['/']);
+    }
+
+    searchProduct(searchItem : KeyboardEvent){
+      if(searchItem)
+      {
+        const element = searchItem.target as HTMLInputElement;
+        console.warn(element.value);
+        this.product.serchProduct(element.value).subscribe((result)=>{
+          console.warn(result)
+        })
+      }
     }
 }

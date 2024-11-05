@@ -39,4 +39,9 @@ export class ProductService {
     return this.http.get<product[]>('http://localhost:3000/products?_limit=8')
   }
 
+  serchProduct(searchItem : string)
+  {
+    return this.http.get<product[]>(`http://localhost:3000/products?q=${searchItem}`)
+  }
+
 }
