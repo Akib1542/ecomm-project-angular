@@ -1,38 +1,40 @@
 @if (popularProduct) {
-	<ngb-carousel>
-		<ng-template *ngFor="let prod of popularProduct" ngbSlide>
-			<div class="picsum-img-wrapper">
-				<img class="productHeaderImage" src="{{prod.url}}" alt="Random first slide" />
-			</div>
-			<div class="carousel-caption">
-				<h3>{{prod.name}}</h3>
-				<p>{{prod.description}}</p>
-			</div>
-		</ng-template>
-		
-	</ngb-carousel>
+<ngb-carousel>
+	<ng-template *ngFor="let prod of popularProduct" ngbSlide>
+		<div class="picsum-img-wrapper">
+			<a routerLink="/details/{{prod.id}}"><img class="productHeaderImage" src="{{prod.url}}"
+					alt="Random first slide" />
+			</a>
+		</div>
+		<div class="carousel-caption">
+			<h3>{{prod.name}}</h3>
+			<p>{{prod.description}}</p>
+		</div>
+	</ng-template>
 
-	<div class="product-list-wrapper"></div>
-	<h1>Trendy Products</h1>
-	<div class="row">
-		<div class="col-sm-3" *ngFor="let prod of trendyProduct">
-			<div class="product-item">
-				<img src="{{prod.url}}" alt="">
+</ngb-carousel>
+
+<div class="product-list-wrapper"></div>
+<h1>Trendy Products</h1>
+<div class="row">
+	<div class="col-sm-3" *ngFor="let prod of trendyProduct">
+		<div class="product-item">
+			<img src="{{prod.url}}" alt="">
+		</div>
+		<div class="product-details">
+			<h6 class="name-head">{{prod.name}}</h6>
+			<div class="product-price">
+				<h6>Price: {{prod.price}}</h6>
 			</div>
-			<div class="product-details">
-				<h6 class="name-head">{{prod.name}}</h6>
-				<div class="product-price">
-					<h6>Price: {{prod.price}}</h6>
-				</div>
-				<div class="product-color">
-					<h6>Color: {{prod.color}}</h6>
-				</div>
-			</div>
-			<div class="product-footer"> 
-				<a href="">View Details</a>
-				<a href="">Add to cart</a>
+			<div class="product-color">
+				<h6>Color: {{prod.color}}</h6>
 			</div>
 		</div>
-		
+		<div class="product-footer">
+			<a routerLink="/details/{{prod.id}}">View Details</a>
+			<a href="">Add to cart</a>
+		</div>
 	</div>
+
+</div>
 }

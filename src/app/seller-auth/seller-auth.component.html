@@ -6,7 +6,9 @@
             <input class="form-input" ngModel name="password" type="text" placeholder="Enter Password">
             <input class="form-input" ngModel name="email" type="text" placeholder="Enter Email">
             <button class="form-button">SignUp</button>
-            <a class="toggle" (click)="openLogin()">Already Have account? Click to login</a>
+            <!-- <a class="toggle" (click)="openLogin()">Already Have account? Click to login</a> -->
+            <p>Already Have an account? <a (click)="openLogin()">Click Here</a> </p>
+
         </form>
     </div>
 
@@ -18,7 +20,9 @@
             <input class="form-input" ngModel name="email" type="text" placeholder="Enter Email">
             <input class="form-input" ngModel name="password" type="text" placeholder="Enter Password">
             <button class="form-button">Login</button>
-            <a class="toggle" (click)="openSignUp()">Not Have an account? Click to SignUp</a>
+            <!-- <a class="toggle" (click)="openSignUp()">Not Have an account? Click to SignUp</a> -->
+            <p>Don't Have an account? <a (click)="openSignUp()">Click Here</a> </p>
+
         </form>
     </div>
 </div>

@@ -59,3 +59,21 @@
   color: red;
 }
 
+.seller-auth p {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 15px;
+}
+
+.seller-auth a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.seller-auth a:hover {
+  color: #0056b3;
+}
+
