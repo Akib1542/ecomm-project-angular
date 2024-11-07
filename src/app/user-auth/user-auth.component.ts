@@ -10,6 +10,7 @@ import { UserService } from '../services/user.service';
 export class UserAuthComponent {
 
   showLogin : boolean = true;
+  authError : string = "";
   constructor(private user : UserService)
   {
   }
@@ -25,6 +26,12 @@ export class UserAuthComponent {
   login(data : login){
     console.warn(data);
     this.user.userLogin(data);
+    this.user.invalidUserAuth.subscribe((result)=>{
+      console.warn("hello",result);
+      if(result){
+        this.authError = "please enter valid user details!";
+      }
+    });
   }
 
   openSignUp(){

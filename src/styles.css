@@ -25,3 +25,9 @@
   .active {
     color: rgb(165, 29, 41);
   }
+
+  button:disabled{
+    cursor: not-allowed;
+  }
+  
+  
