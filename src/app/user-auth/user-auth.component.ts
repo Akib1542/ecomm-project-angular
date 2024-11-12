@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { login, Signup } from '../../data-type';
+import { cart, login, product, Signup } from '../../data-type';
 import { UserService } from '../services/user.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -9,36 +10,44 @@ import { UserService } from '../services/user.service';
 })
 export class UserAuthComponent {
 
-  showLogin : boolean = true;
-  authError : string = "";
-  constructor(private user : UserService)
-  {
+  showLogin: boolean = true;
+  authError: string = "";
+  constructor(private user: UserService, private product : ProductService) {
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.user.userAuthReload();
   }
 
-  signUp(data : Signup){
-      this.user.userSignUp(data);
+  signUp(data: Signup) {
+    this.user.userSignUp(data);
   }
 
-  login(data : login){
+  login(data: login) {
     console.warn(data);
-    this.user.userLogin(data);
-    this.user.invalidUserAuth.subscribe((result)=>{
-      console.warn("hello",result);
-      if(result){
+    const userProfile = this.user.userLogin(data);
+
+    this.user.invalidUserAuth.subscribe((result) => {
+      console.warn("error or not: ", result);
+      if (result) {
+        console.warn("there is an error!");
+        
         this.authError = "please enter valid user details!";
+      }
+      else {
       }
     });
   }
 
-  openSignUp(){
+  openSignUp() {
     this.showLogin = false;
   }
 
-  openLogin(){
+  openLogin() {
     this.showLogin = true;
   }
+
+ 
+
+
 }

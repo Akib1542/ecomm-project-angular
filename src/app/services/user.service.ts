@@ -28,7 +28,7 @@ export class UserService {
     }
   }
 
-  userLogin(data : login){
+  userLogin(data : login) {
     this.http.get<Signup[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,
       {observe:'response'}).subscribe((result)=>{
         if(result && result.body?.length){
